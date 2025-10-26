@@ -3,6 +3,13 @@
 
 https://github.com/user-attachments/assets/52d3ea2e-5d28-4d40-83bb-ef7d22cb174a
 
+
+Strategies currently implemented:
+
+Long Call, Bull Call Spread, Iron Condor, Bear Put Spread, Long Put. These are recommended based on percentage move of share price of the underlying using the target price and are independent of the expiry.
+
+
+
 This application was developed using Python, Flask, and Polygon's stock and option API. The application fetches the latest available stock prices, using the free version of Polygon's API, which allows up to 5 calls per minute and provides end-of-day pricing information. As such, the stock price returned will reflect the most recent business day's closing value. Keep in mind that due to the limitations of the free API tier, the data you receive doesn't include the latest market movements if you require more frequent updates.
 
 The api calls are written such that if the 5 per minute limit is exceeded, the function waits 20 seconds and tries again. This can cause some long wait times.
